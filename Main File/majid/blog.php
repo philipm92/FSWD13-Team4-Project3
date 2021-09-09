@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<html lang="zxx">
-
-
+<html lang="en">
 	<head>
 		<!-- Meta -->
 		<meta charset="utf-8">
@@ -10,33 +8,9 @@
 		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 		
 		<!-- SITE TITLE -->
-		<title>Al-Majid - Woocommerce Bootstrap Template</title>
-		<!-- Favicon -->
-		<link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
-		
-		<!-- Latest Bootstrap min CSS -->
-		<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">	
-		<!-- Google Fonts -->
-		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500&display=swap" rel="stylesheet">		
-		<!-- Font Awesome CSS -->
-		<link rel="stylesheet" href="assets/fonts/font-awesome.css">
-		<!--magnific-popup Css-->
-        <link rel="stylesheet" href="assets/css/magnific-popup.css">
-		<!--animate Css-->
-        <link rel="stylesheet" href="assets/css/animate.css">
-		<!--slick Css-->
-        <link rel="stylesheet" href="assets/css/slick.css">
-		<!-- Style CSS -->
-		<link rel="stylesheet" href="assets/css/style.css">
-		<!-- Responsive CSS -->
-		<link rel="stylesheet" href="assets/css/responsive.css">
-		
-		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't gallery if you view the page via file:// -->
-		<!--[if lt IE 9]>
-		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
+		<title>Famazon - E-commerce | Blog</title>
+		<!-- CSS Styling COMPONENTS -->
+		<?php include_once "components/csscollection.php" ?>
 	</head>
 
 	<body>
@@ -44,109 +18,16 @@
 		<!-- Page Wrapper -->
 		<div class="page-wrapper">
 		
-			<!-- START PRELOADER -->
-			<div class="atf-preloader">
-				<div class="atf-status">
-					<div class="atf-status-mes"></div>
-				</div>
-			</div> 
-			<!-- END PRELOADER -->	
-			
-			<!-- START back-to-top -->	
-			<button class="atf-scroll-top atf-back-to-top" data-targets="html">
-				<i class="fa fa-angle-up atf-scrollup-icon"></i>
-			</button>
-			<!-- END back-to-top-->	
-			<div class="body-overlay" id="body-overlay"></div>
-			
+			<!-- PRELOADER COMPONENT -->
+			<?php include_once "components/preloader.php" ?>
+			<!-- Back-to-top COMPONENT -->	
+			<?php include_once "components/totop.php" ?>
+			<!-- Body Overlay COMPONENT -->
+			<?php include_once "components/boverlay.php" ?>
 			<!-- search popup area start -->
-			<div class="search-popup" id="search-popup">
-				<form action="http://themesfamily/tm/majid/index.html" class="search-form">
-					<div class="form-group">
-						<input type="text" class="form-control" placeholder="Search.....">
-					</div>
-					<button type="submit" class="submit-btn"><i class="fa fa-search"></i></button>
-				</form>
-			</div>
-			<!-- //. search Popup -->
-		
-			<!-- Start Header Section -->
-			<header class="atf-site-header atf-style1 atf-sticky-header">
-				<div class="atf-top-header">
-					<div class="container">
-						<div class="row">
-							<div class="col-lg-8 col-md-8">
-								<div class="atf-top-header-in wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s" data-wow-offset="0">
-									<ul class="atf-top-header-list">
-										<li><i class="fas fa-envelope"></i>Email: <a href="#">example@gmail.com</a></li>
-										<li><i class="fas fa-phone-volume"></i>Contact: <a href="#">000-1112-2221 </a></li>
-									</ul>
-								</div>
-							</div><!--- END COL -->
-							<div class="col-lg-4 col-md-4">
-								<div class="nav-right-part nav-right-part-desktop">
-									<ul>
-										<li><a class="search header-search" href="#"><i class="fa fa-search"></i></a></li>
-										<li class=""><a class="login-btn" href="#">Login</a></li>
-										<li><a class="shopping-cart-btn" href="#"><i class="fa fa-shopping-cart"></i><span>2</span></a></li>
-									</ul>
-								</div>
-							</div><!--- END COL -->
-						</div><!--- END ROW -->
-					</div><!--- END CONTAINER -->
-				</div><!--- END TOP HEADER -->
-				
-				<div class="atf-main-header">
-					<div class="container">
-						<div class="atf-main-header-in">
-							<div class="atf-main-header-left">
-								<a class="atf-site-branding atf-white-logo" href="blog.html"><img src="assets/img/logo.png" alt="Logo"></a>
-							</div>
-
-							 <div class="nav-right-part nav-right-part-mobile">
-								<ul>
-									<li><a class="search header-search" href="#"><i class="fa fa-search"></i></a></li>
-									<li class=""><a class="login-btn" href="#">Login</a></li>
-									<li><a class="shopping-cart-btn" href="#"><i class="fa fa-shopping-cart"></i><span>2</span></a></li>
-								</ul>
-							</div>
-
-							<div class="atf-main-header-right">
-								<div class="atf-nav">
-									<ul class="atf-nav-list atf-onepage-nav">
-										<li class="menu-item-has-children"><a href="#home" class="atf-smooth-move">Home<i class="fa fa-chevron-down ml-2"></i></a>
-											<ul>
-												<li><a href="index1.html">Home 1</a></li>
-												<li><a href="index2.html">Home 2</a></li>
-											</ul>
-										</li>
-										<li><a href="product.html">Shop</a></li>
-											<li class="menu-item-has-children"><a href="#" class="atf-smooth-move">Pages<i class="fa fa-chevron-down ml-2"></i></a>
-												<ul>
-													<li class="menu-item-has-children"><a href="cart.html">Cart</a></li>
-													<li class="menu-item-has-children"><a href="checkout.html">Checkout</a></li>
-													<li class="menu-item-has-children"><a href="product.html">Product 01</a></li>
-													<li class="menu-item-has-children"><a href="product-details.html">Product Details</a></li>
-													<li class="menu-item-has-children"><a href="contact.html"> Contact Us</a></li>
-													<li class="menu-item-has-children"><a href="error.html">404</a></li>
-												</ul>
-											</li>
-										<li class="menu-item-has-children"><a href="#blog" class="atf-smooth-move">Blog<i class="fa fa-chevron-down ml-2"></i></a>
-											<ul>
-												<li class="menu-item-has-children"><a href="blog.html">Blog Grid List</a></li>
-												<li class="menu-item-has-children"><a href="blog-details.html"> Single details</a></li>
-											</ul>
-										</li>
-										<li><a href="contact.html" class="#">Contact</a></li>
-									</ul><!--- END NAV -->
-								</div>
-							</div><!--- END MAIN HEADER RIGHT -->
-						</div>
-					</div><!--- END CONTAINER -->
-				</div><!--- END MAIN HEADER -->
-			</header>
-			<!-- End Header Section -->
-			
+			<?php include_once "components/searchpopup.php" ?>
+			<!-- NAVBAR COMPONENT -->
+			<?php include_once "components/navbar.php" ?>
 
 			<div class="atf-content clearfix">
 				<div class="atf-page-heading atf-size-md atf-dynamic-bg" data-stellar-background-ratio="0.3" style="background-image: url(assets/img/blog/5.jpg); background-size:cover; background-position: center center;">
@@ -574,142 +455,19 @@
 				</div><!--- END Section -->
 			</div>
 			<!--- END CONTENT -->
+			
+			<!-- NEWSLETTER COMPONENTS -->
+			<?php include_once "components/newsletter.php" ?>
+			
+			<!-- FOOTER SECTION-->
+			<?php include_once "components/footer.php" ?>
 
-			
-		   <!-- START NEWSLETTER -->
-			<section  class="atf-newsletter atf-section-padding">
-				<div class="container">
-					<div class="row clearfix justify-content-center">
-						<div class="col-xl-6 col-lg-6 col-12 text-center wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s" data-wow-offset="0">
-							<div class="atf-mailchamp-headding">
-								<h2>Subcribe Today of Newletter</h2>
-							</div>
-						</div><!-- END COL -->
-						
-						<div class="col-xl-6 col-lg-6 col-12 text-center wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s" data-wow-offset="0">	
-							<div class="atf-mailchamp-subscribe">
-								<form class="form-group" id="mc-form">
-									<input type="email" name="email" class="form-control" id="email" placeholder="Your Email" required="required">
-									<button type="submit" id="subscribe-button" class="btn"><i class="fas fa-envelope"></i></button>
-										<!-- SUBSCRIPTION SUCCESSFUL OR ERROR MESSAGES -->
-										<br>
-										<label class="atf-subscription-label" for="email"></label>
-								</form>
-							</div>
-						</div><!-- END COL -->
-					</div><!-- END ROW -->
-				</div><!-- END CONTAINER -->
-			</section>
-			<!-- END NEWSLETTER -->
-			
-			
-			
-			<!-- FOOTER SECTION START-->
-			<footer class="atf-footer-area">
-				<div class="container">
-					<div class="atf-footer-top mt-5">
-						<div class="row">
-							<div class="col-lg-4 col-md-6 col-12 atf-footer-link wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s" data-wow-offset="0">
-								<div class="atf-footer-box">
-									<h5><a href=""><img class="atf-footer-logo" src="assets/img/logo.png" alt="" /></a></h5>
-									<ul class="pr-lg-5">
-										<li>1 Grafton Street, Dublin, Ireland</li>
-										<li>(+222) 245 88 <br> (+258) 878 369</li>
-										<li>example@gmail.com</li>
-									</ul>
-								</div>
-							</div><!--- END COL -->
-							
-							<div class="col-lg-2 col-md-6 col-12 atf-footer-link wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s" data-wow-offset="0">
-								<h5>Quick Links</h5>
-								<ul class="atf-list-menu">
-									<li> <a href="#"><i class="fas fa-angle-right mr-2"></i>Get Stared</a></li>
-									<li> <a href="#"><i class="fas fa-angle-right mr-2"></i>Our Team</a></li>
-									<li> <a href="#"><i class="fas fa-angle-right mr-2"></i>About Us</a></li>
-									<li> <a href="#"><i class="fas fa-angle-right mr-2"></i>Need Helps</a></li>
-									<li> <a href="#"><i class="fas fa-angle-right mr-2"></i>Contact Us</a></li>
-								</ul>
-							</div><!--- END COL -->
-							
-							<div class="col-lg-2 col-md-6 col-12 atf-footer-link wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s" data-wow-offset="0">
-								<h5>Support Links</h5>
-								<ul class="atf-list-menu">
-									<li><a href="#"><i class="fas fa-angle-right mr-2"></i>Our Terms</a></li>
-									<li><a href="#"><i class="fas fa-angle-right mr-2"></i>Our Service</a></li>
-									<li><a href="#"><i class="fas fa-angle-right mr-2"></i>Privacy Policy</a></li>
-									<li><a href="#"><i class="fas fa-angle-right mr-2"></i>Licenses</a></li>
-									<li><a href="#"><i class="fas fa-angle-right mr-2"></i>Our News</a></li>
-								</ul>
-							</div><!--- END COL -->
-							
-							<div class="col-lg-4 col-md-6 col-12 atf-footer-link text-left wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s" data-wow-offset="0">
-								<h5>Contact Us</h5>
-								<div class="atf-footer-con">
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit Maecenas gravida nulla.</p>
-								</div>
-								<h4 class="text-white mt-2">Follow Us</h4>
-								<div class="atf-footer-social-icon mt-3 text-left">
-									<a href="#" class="icon"> <i class="fab fa-facebook"></i> </a>
-									<a href="#" class="icon"> <i class="fab fa-dribbble"></i> </a>
-									<a href="#" class="icon"> <i class="fab fa-behance"></i> </a>
-									<a href="#" class="icon"> <i class="fab fa-linkedin"></i> </a>
-									<a href="#" class="icon"> <i class="fab fa-twitter"></i> </a>
-								</div>
-							</div><!--- END COL -->
-						</div><!--- END ROW -->
-					</div><!--- END SINGLE FOOTER -->
-				</div><!--- END CONTAINER -->
-					
-				<div class="atf-footer-boottom mt-4">
-					<div class="container">
-						<div class="row">
-							<div class="col-lg-5 col-xl-5 col-12 my-auto text-lg-left wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s" data-wow-offset="0">
-								<p>&copy;Copyright - All Right Reserved.Designed <i class="fa fa-heart ml-1 mr-1"></i> by <a href="">Theme Family</a> </p>
-							</div><!--- END COL -->
-							
-							 <div class="col-lg-7 col-xl-7 col-12">
-								<div class="atf-payment-area text-lg-right my-auto mx-auto">
-									<ul>
-										<li><a href="checkout.html"><img src="assets/img/payment/1.png" alt="img"></a></li>
-										<li><a href="checkout.html"><img src="assets/img/payment/2.png" alt="img"></a></li>
-										<li><a href="checkout.html"><img src="assets/img/payment/3.png" alt="img"></a></li>
-										<li><a href="checkout.html"><img src="assets/img/payment/1.png" alt="img"></a></li>
-										<li><a href="checkout.html"><img src="assets/img/payment/2.png" alt="img"></a></li>
-										<li><a href="checkout.html"><img src="assets/img/payment/3.png" alt="img"></a></li>
-									</ul>
-								</div>
-							</div><!--- END COL -->
-						</div><!--- END ROW -->
-					</div>
-				</div>
-				<!-- FOOTER SECTION END-->	
-			</footer><!--- END FOOTER -->
 		</div>
 		<!-- PAGE WRAPPER END-->
 		
 		
-		<!-- Latest jQuery -->
-		<script src="assets/js/jquery-1.12.4.min.js"></script>
-		<!-- Latest compiled and minified Bootstrap -->
-		<script src="assets/bootstrap/js/bootstrap.js"></script>
-		<!-- modernizer JS -->		
-		<script src="assets/js/modernizr.custom.js"></script>	
-		<!-- magnific-popup js -->	
-		<script src="assets/js/jquery.magnific-popup.js"></script>			
-		<!-- stellar js -->
-		<script src="assets/js/jquery.stellar.min.js"></script>
-		<!-- slick js -->
-		<script src="assets/js/slick.js"></script>
-		<!-- countdown js -->
-		<script src="assets/js/jquery.countdown.js"></script>
-		<!-- wow js -->
-		<script src="assets/js/wow.min.js"></script>
-		<!-- ajaxchimp js -->
-		<script src="assets/js/ajaxchimp.min.js"></script>
-		<!-- form-contact js -->
-		<script src="assets/js/form-contact.js"></script>
-		<!-- main js -->
-		<script src="assets/js/main.js"></script>	
+		<!-- JS Script COMPONENTS -->
+		<?php include_once "components/jscollection.php" ?>
 		
 	</body>
 </html>
