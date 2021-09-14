@@ -16,10 +16,10 @@
 	</head>
 
 	<body>
-
+	
 		<!-- Page Wrapper -->
 		<div class="page-wrapper">
-		
+	
 			<!-- PRELOADER COMPONENT -->
 			<?php include_once "components/preloader.php" ?>
 			<!-- Back-to-top COMPONENT -->	
@@ -114,16 +114,14 @@
 				</section>
 				<!-- CONTACT SECTION END-->
 				
-				<!-- Google Map start-->
-				<div id="atf-map-area">
-					<iframe style="border:0" src="https://maps.google.com/maps?width=100%25&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" allowfullscreen></iframe>
-				</div>
-				<!-- Google Map end -->
-				
+				<!-- Google Map start
+				<h1 style="display:flix;margin-left: 30%;"> You can find Us here</h1>
+				<div id="atf-map-area" style= "border:10px solid red;">
+				 Google Map end -->	
+				 
+				 
 			</div>
 			<!--- END CONTENT -->
-			
-			
 			 <!-- START COMPANY BRAND LOGO  -->
 			<div id="atf-brand-area" class="atf-brand-area atf-section-padding">
 				<div class="atf-brand-overlay">
@@ -191,11 +189,16 @@
 		 
 		   <!-- FOOTER SECTION-->
 		   <?php include_once "components/footer.php" ?>
+		  
 		</div>
 		<!-- PAGE WRAPPER END-->
 		
 		<!-- JS Script COMPONENTS -->
 		<?php include_once "components/jscollection.php" ?>
+		<h1 style="display:flix;margin-left: 35%;"> You can find Us here</h1>
+		
+			<?php include_once "components/maps.php" ?>
+		
 		
 	</body>
 </html>

@@ -20,3 +20,4 @@
 <script src="assets/js/form-contact.js"></script>
 <!-- main js -->
 <script src="assets/js/main.js"></script>	
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtjaD-saUZQ47PbxigOg25cvuO6_SuX3M&callback=initMap" async defer></script>

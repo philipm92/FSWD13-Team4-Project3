@@ -756,5 +756,8 @@
 		
 		<!-- JS Script COMPONENTS -->
 		<?php include_once "components/jscollection.php" ?>
+		
+
+		
 	</body>
 </html>

@@ -19,7 +19,7 @@
 					<ul class="atf-list-menu">
 						<li> <a href="#"><i class="fas fa-angle-right mr-2"></i>Get Stared</a></li>
 						<li> <a href="#"><i class="fas fa-angle-right mr-2"></i>Our Team</a></li>
-						<li> <a href="#"><i class="fas fa-angle-right mr-2"></i>About Us</a></li>
+						<li> <a href="about_us.php"><i class="fas fa-angle-right mr-2"></i>About Us</a></li>
 						<li> <a href="#"><i class="fas fa-angle-right mr-2"></i>Need Helps</a></li>
 						<li> <a href="#"><i class="fas fa-angle-right mr-2"></i>Contact Us</a></li>
 					</ul>
@@ -29,9 +29,9 @@
 					<h5>Support Links</h5>
 					<ul class="atf-list-menu">
 						<li><a href="#"><i class="fas fa-angle-right mr-2"></i>Our Terms</a></li>
-						<li><a href="#"><i class="fas fa-angle-right mr-2"></i>Our Service</a></li>
-						<li><a href="#"><i class="fas fa-angle-right mr-2"></i>Privacy Policy</a></li>
-						<li><a href="#"><i class="fas fa-angle-right mr-2"></i>Licenses</a></li>
+						<li><a href="components/our_service.php"><i class="fas fa-angle-right mr-2"></i>Our Service</a></li>
+						<li><a href="components/privacy_policy.php"><i class="fas fa-angle-right mr-2"></i>Privacy Policy</a></li>
+						<li><a href="components/License.html"><i class="fas fa-angle-right mr-2"></i>Licenses</a></li>
 						<li><a href="#"><i class="fas fa-angle-right mr-2"></i>Our News</a></li>
 					</ul>
 				</div><!--- END COL -->
@@ -63,5 +63,6 @@
 			</div><!--- END ROW -->
 		</div>
 	</div>
+	
 	<!-- FOOTER SECTION END-->	
 </footer><!--- END FOOTER -->

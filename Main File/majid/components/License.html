@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service</title>
+</head>
+<style>
+  body,
+  html {
+    background-color: rgba(163, 157, 157, 0.432);
+  }
+
+  .content {
+    max-width: 500px;
+    margin: auto;
+  }
+
+  .container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+  }
+
+  /* On mouse-over, add a grey background color */
+  .container:hover input~.checkmark {
+    background-color: #ccc;
+  }
+
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked~.checkmark {
+    background-color: #2196F3;
+  }
+
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  /* Show the checkmark when checked */
+  .container input:checked~.checkmark:after {
+    display: block;
+  }
+
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+</style>
+
+<body>
+
+  <h2>Our "Terms of Service" include several different documents. </h2>
+
+  <ol>
+    <li>Terms</li>
+    <p>By accessing this web site, you are agreeing to be bound by these web site Terms and Conditions of Use, all
+      applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws.
+      If you do not agree with any of these terms, you are prohibited from using or accessing this site. The materials
+      contained in this web site are protected by applicable copyright and trade mark law.</p>
+
+    <li>Use License</li>
+    <ul>
+      <li> Permission is granted to temporarily download one copy of the materials (information or software) on HTML
+        Global’s website for personal, non-commercial transitory viewing only. This is the grant of a license, not a
+        transfer of title, and under this license you may not:</li>
+      <ul>
+        <li>modify or copy the materials;</li>
+        <li>use the materials for any commercial purpose, or for any public display (commercial or non-commercial);</li>
+        <li>attempt to decompile or reverse engineer any software contained on HTML Global’s website;</li>
+        <li>remove any copyright or other proprietary notations from the materials; or</li>
+        <li>transfer the materials to another person or “mirror” the materials on any other server.</li>
+      </ul>
+      <li>This license shall automatically terminate if you violate any of these restrictions and may be terminated by
+        HTML Global at any time. Upon terminating your viewing of these materials or upon the termination of this
+        license, you must destroy any downloaded materials in your possession whether in electronic or printed format.
+      </li>
+    </ul>
+
+    <li>Disclaimer</li>
+
+    <p>The materials on HTML Global’s website is provided “as is”. HTML Global makes no warranties, expressed or
+      implied, and hereby disclaims and negates all other warranties, including without limitation, implied warranties
+      or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property
+      or other violation of rights. Further, HTML Global does not warrant or make any representations concerning the
+      accuracy, likely results, or reliability of the use of the materials on its Internet web site or otherwise
+      relating to such materials or on any sites linked to this site.</p>
+
+    <li>Limitations</li>
+    <p>In no event shall HTML Global or its suppliers be liable for any damages (including, without limitation, damages
+      for loss of data or profit, or due to business interruption,) arising out of the use or inability to use the
+      materials on HTML Global’s Internet site, even if HTML Global or an HTML Global authorized representative has been
+      notified orally or in writing of the possibility of such damage. Because some jurisdictions do not allow
+      limitations on implied warranties, or limitations of liability for consequential or incidental damages, these
+      limitations may not apply to you.</p>
+    <li> Revisions and Errata</li>
+    <p>The materials appearing on HTML Global’s web site could include technical, typographical, or photographic errors.
+      HTML Global does not warrant that any of the materials on its web site are accurate, complete, or current. HTML
+      Global may make changes to the materials contained on its web site at any time without notice. HTML Global does
+      not, however, make any commitment to update the materials.</p>
+    <label class="container">I agree to the Famazon Terms of Service
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    </label>
+  </ol>
+
+</body>
+
+</html>
