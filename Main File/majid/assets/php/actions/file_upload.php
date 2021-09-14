@@ -3,7 +3,7 @@ function file_upload($picture, $source = "user")
 {
     $result = new stdClass(); //this object will carry status from file upload
     $result->fileName = 'avatar.png';
-    if(isset($_SESSION['adm']))$result->fileName = 'product.png';  
+    if($source == 'products')$result->fileName = 'product.png';  
 
     $result->error = 1;//it could also be a boolean true/false
     //collect data from object $picture
@@ -23,7 +23,7 @@ function file_upload($picture, $source = "user")
                 if ($fileSize < 1000000) {
                     //it gives a file name based microseconds
                     $fileNewName = uniqid('') . "." . $fileExtension; // 1233343434.jpg i.e
-                    if($source == 'products'){
+                    if ($source == 'products'){
                         $destination = "../../img/product/$fileNewName";
                     } elseif ($source == 'user'){
                         $destination = "../../img/$fileNewName";

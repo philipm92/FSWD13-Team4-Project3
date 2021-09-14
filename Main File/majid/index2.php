@@ -1,3 +1,9 @@
+<?php
+session_start();
+ob_start();
+require_once 'assets/php/db_connect.php';
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -35,19 +41,19 @@
 					<div class="slick-container" data-autoplay="0" data-loop="1" data-speed="800" data-autoplay-timeout="1000" data-center="0" data-slides-per-view="1" data-fade-slide="1">
 						<div class="slick-wrapper">
 							<div class="slick-slide-in">						
-								<div class="atf-single-home atf-hero-area" style="background-image: url(assets/img/banner/1.jpg);  background-size:cover; background-position: center center;">
+								<div class="atf-single-home atf-hero-area" style="background-image: url(assets/img/gallery/Asus_VivoBook.jpg);  background-size:cover; background-position: center center;">
 									<div class="atf-home-overlay">
 										<div class="container">
 											<div class="row atf-single-slide-sm2 atf-align-items-details align-items-center atf-single-text justify-content-center">
 												 <!--LEFT COL-->
 												<div class="col-xl-6 col-lg-6 col-12 text-center atf-single-details ">
 													<h5 class="mb-0 d-block d-lg-block text-white">Tranding Now</h5>
-													<h2 class="mb-0 d-block d-lg-block">Best Promo Offer Man Your Collection.</h2>
-													<p class="pr-lg-5">A Theme for Woocomarce, E-commerce, Business, Bootstrap 5, Product, Sell and for Cart etc.</p>
+													<h2 class="mb-0 d-block d-lg-block">Asus VivoBook</h2>
+													<p class="pr-lg-5">Find the best products on our site.</p>
 													<!-- Main-btn -->
 													<div class="atf-main-btn mt-3"> 
-														<a href="product-details.html" class="page-scroll atf-themes-btn mr-4">Shop Now <i class="fa fa-angle-right"></i></a>
-														<a href="product-details.html" class="page-scroll atf-themes-btn">Order Now <i class="fa fa-angle-right"></i></a>
+														<a href="product-details.php" class="page-scroll atf-themes-btn mr-4">Shop Now <i class="fa fa-angle-right"></i></a>
+														<a href="product-details.php" class="page-scroll atf-themes-btn">Order Now <i class="fa fa-angle-right"></i></a>
 													</div>
 												</div><!--- END COL -->
 											</div><!--- END ROW -->
@@ -57,19 +63,19 @@
 							</div><!-- .slick-slide-in -->
 							
 							<div class="slick-slide-in">						
-								<div class="atf-single-home atf-hero-area" style="background-image: url(assets/img/banner/3.jpg);  background-size:cover; background-position: center center;">
+								<div class="atf-single-home atf-hero-area" style="background-image: url(assets/img/gallery/brigitte.jpg);  background-size:cover; background-position: center center;">
 									<div class="atf-home-overlay">
 										<div class="container">
 											<div class="row atf-single-slide-sm atf-align-items-details align-items-center atf-single-text justify-content-center">
 												 <!--LEFT COL-->
 												<div class="col-xl-6 col-lg-6 col-12 text-center atf-single-details ">
 													<h5 class="mb-0 d-block d-lg-block text-white">Tranding Now</h5>
-													<h2 class="mb-0 d-block d-lg-block"> Best Promo Collection Offer of Laptop.</h2>
-													<p class="pr-lg-5">A Theme for Woocomarce, E-commerce, Business, Bootstrap 5, Product, Sell and for Cart etc.</p>
+													<h2 class="mb-0 d-block d-lg-block">Coats from our designers</h2>
+													<p class="pr-lg-5">Find the best products on our site.</p>
 													<!-- Main-btn -->
 													<div class="atf-main-btn mt-3"> 
-														<a href="product-details.html" class="page-scroll atf-themes-btn mr-4">Shop Now <i class="fa fa-angle-right"></i></a>
-														<a href="product-details.html" class="page-scroll atf-themes-btn">Order Now <i class="fa fa-angle-right"></i></a>
+														<a href="product-details.php" class="page-scroll atf-themes-btn mr-4">Shop Now <i class="fa fa-angle-right"></i></a>
+														<a href="product-details.php" class="page-scroll atf-themes-btn">Order Now <i class="fa fa-angle-right"></i></a>
 													</div>
 												</div><!--- END COL -->
 											</div><!--- END ROW -->
@@ -79,19 +85,19 @@
 							</div><!-- .slick-slide-in -->
 							
 							<div class="slick-slide-in">						
-								<div class="atf-single-home atf-hero-area" style="background-image: url(assets/img/banner/2.jpg);  background-size:cover; background-position: center center;">
+								<div class="atf-single-home atf-hero-area" style="background-image: url(assets/img/gallery/Talson_26Zoll_MTB.jpg);  background-size:cover; background-position: center center;">
 									<div class="atf-home-overlay">
 										<div class="container">
 											<div class="row atf-single-slide-sm atf-align-items-details align-items-center atf-single-text justify-content-center">
 												 <!--LEFT COL-->
 												<div class="col-xl-6 col-lg-6 col-12 text-center atf-single-details ">
 													<h5 class="mb-0 d-block d-lg-block text-white">Tranding Now</h5>
-													<h2 class="mb-0 d-block d-lg-block"> Best Promo Offer Chair Your Collection.</h2>
-													<p class="pr-lg-5">A Theme for Woocomarce, E-commerce, Business, Bootstrap 5, Product, Sell and for Cart etc.</p>
+													<h2 class="mb-0 d-block d-lg-block">Talson Mountainbike</h2>
+													<p class="pr-lg-5">Find the best products on our site.</p>
 													<!-- Main-btn -->
 													<div class="atf-main-btn mt-3"> 
-														<a href="product-details.html" class="page-scroll atf-themes-btn mr-4">Shop Now <i class="fa fa-angle-right"></i></a>
-														<a href="product-details.html" class="page-scroll atf-themes-btn">Order Now <i class="fa fa-angle-right"></i></a>
+														<a href="product-details.php" class="page-scroll atf-themes-btn mr-4">Shop Now <i class="fa fa-angle-right"></i></a>
+														<a href="product-details.php" class="page-scroll atf-themes-btn">Order Now <i class="fa fa-angle-right"></i></a>
 													</div>
 												</div><!--- END COL -->
 											</div><!--- END ROW -->
@@ -112,9 +118,77 @@
 			<!-- END  HOME DESIGN -->
 			
 			
+			<!-- portfolio Section Start -->
+			<section id="portfolio" class="atf-portfolio-area atf-section-padding">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-xl-6 col-lg-6 col-12">
+							<div class="atf-section-title text-center wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s" data-wow-offset="0">
+								<h2 class="">Categories</h2>
+								<p class="">Search through our categories</p>
+							</div>
+						</div><!--- END COL -->
+					</div><!--- END ROW -->
+				</div><!--- END CONTANIER -->
+					
 
-			<!-- FEATURE SECTION -->
-			<?php include_once "components/featurearea.php" ?>
+				<div class="container clearfix">
+					<div class="atf-slider atf-style2">
+						<div class="slick-container" data-autoplay="0" data-loop="1" data-speed="600" data-center="0"  data-slides-per-view="responsive" data-xs-slides="1" data-sm-slides="2" data-md-slides="3" data-lg-slides="4" data-add-slides="3">
+							<div class="slick-wrapper">
+
+
+								<?php 
+									$sql = 'SELECT * FROM `categories`';
+									$result = $db->query($sql); //mysqli_query($connection, $sql);
+				 
+									$rows = $result->fetchAll(); //mysqli_fetch_array($result);
+									foreach ($rows as $row) {
+									//while ($row = $result->fetch_row()) {
+										echo('
+										<div class="slick-slide-in">
+										<!-- portfolio-item -->
+										<div class="atf-grid all logo">
+											<div class="atf-grid-portfolio">
+												<a class="atf-popup-img atf-single-portfolio" href="assets/img/cart-product/1.jpg">
+													<img class="atf-portfolio-img img-fluid mx-auto" src="assets/img/cart-product/1.jpg" alt="img">
+													<div class="atf-hover-portfolio">
+														<div class="atf-portfolio-content">
+															<div class="atf-portfolio-icon">
+																<i class="icon fa fa-shopping-basket"></i>
+															</div>
+															<h3>'.$row['name'].'</h3>
+															<p>'.$row['name'].'</p>
+														</div>
+													</div>
+												</a>
+											</div><!--- END COL -->
+										</div><!--- END COL -->
+									</div><!-- .slick-slide-in -->
+										
+										');
+								
+									}
+								?>
+								
+					
+							</div><!-- .slick-slide-Wrapper -->
+						</div><!-- .slick-container -->
+						
+						<div class="pagination atf-style1 atf-flex atf-hidden"></div> <!-- If dont need Pagination then add class .atf-hidden -->
+						<div class="swipe-arrow atf-style1"> <!-- If dont need navigation then add class .atf-hidden -->
+							<div class="slick-arrow-left"><i class="fa fa-chevron-left"></i></div>
+							<div class="slick-arrow-right"><i class="fa fa-chevron-right"></i></div>
+						</div>
+					</div><!-- .atf-slider -->
+				</div><!-- .container -->	
+				
+				<div class="atf-portfolio-btn atf-main-btn text-center wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s" data-wow-offset="0">
+					<a href="portfolio.html" class="atf-themes-btn mt-5">View More<i class="fa fa-angle-right"></i></a>
+				</div>
+			</section>
+			<!-- Portfolio Section End -->
+			
 			
 			
 			
@@ -133,7 +207,7 @@
 									</div>
 									<div class="atf-service-content">
 										<h3>Free Shipping</h3>
-										<p>Lorem elementum Sed congue nisl dolorSed congue nisl dolor Lorem Sed congue nisl dolorSed.</p>
+										<p>Free shipping worldwide on products over 500$.</p>
 									</div>
 								</div>
 							</div>   
@@ -147,7 +221,7 @@
 									</div>
 									<div class="atf-service-content">
 										<h3>24/7 support</h3>
-										<p>Lorem elementum Sed congue nisl dolorSed congue nisl dolor Lorem Sed congue nisl dolorSed.</p>
+										<p>For questions visit our Q&A site or talk to our live support.</p>
 									</div>
 								</div>
 							</div>   
@@ -161,7 +235,7 @@
 									</div>
 									<div class="atf-service-content">
 										<h3>Secure Payment</h3>
-										<p>Lorem elementum Sed congue nisl dolorSed congue nisl dolor Lorem Sed congue nisl dolorSed.</p>
+										<p>Pay your orders with Paypal, online banking, credit card or Amazon Pay.</p>
 									</div>
 								</div>
 							</div>   
@@ -172,188 +246,17 @@
 			<!-- Service-Area End-->
 			
 			
-			<!-- portfolio Section Start -->
-			<section id="portfolio" class="atf-portfolio-area atf-section-padding">
-				<div class="container">
-					<div class="row justify-content-center">
-						<div class="col-xl-6 col-lg-6 col-12">
-							<div class="atf-section-title text-center wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s" data-wow-offset="0">
-								<h2 class="">Top Categories</h2>
-								<p class="">Lorem ipsum dolor sit amet elit , consectetur adipiscing , sed eiusmod tempor sit amet elit dolor sit amet elit..</p>
-							</div>
-						</div><!--- END COL -->
-					</div><!--- END ROW -->
-				</div><!--- END CONTANIER -->
-					
-
-				<div class="container clearfix">
-					<div class="atf-slider atf-style2">
-						<div class="slick-container" data-autoplay="0" data-loop="1" data-speed="600" data-center="0"  data-slides-per-view="responsive" data-xs-slides="1" data-sm-slides="2" data-md-slides="3" data-lg-slides="4" data-add-slides="3">
-							<div class="slick-wrapper">
-								<div class="slick-slide-in">
-									<!-- portfolio-item -->
-									<div class="atf-grid all logo">
-										<div class="atf-grid-portfolio">
-											<a class="atf-popup-img atf-single-portfolio" href="assets/img/cart-product/1.jpg">
-												<img class="atf-portfolio-img img-fluid mx-auto" src="assets/img/cart-product/1.jpg" alt="img">
-												<div class="atf-hover-portfolio">
-													<div class="atf-portfolio-content">
-														<div class="atf-portfolio-icon">
-															<i class="icon fa fa-shopping-basket"></i>
-														</div>
-														<h3>Product Title</h3>
-														<p>$200</p>
-													</div>
-												</div>
-											</a>
-										</div><!--- END COL -->
-									</div><!--- END COL -->
-								</div><!-- .slick-slide-in -->
-					
-								<div class="slick-slide-in">
-									<!-- portfolio-item -->
-									<div class="atf-grid all media app">
-										<div class="atf-grid-portfolio">
-											<a class="atf-popup-img atf-single-portfolio" href="assets/img/cart-product/2.jpg">
-												<img class="atf-portfolio-img img-fluid mx-auto" src="assets/img/cart-product/2.jpg" alt="img">
-												<div class="atf-hover-portfolio">
-													<div class="atf-portfolio-content">
-														<div class="atf-portfolio-icon">
-															<i class="icon fa fa-shopping-basket"></i>
-														</div>
-														<h3>Product Title</h3>
-														<p>$200</p>
-													</div>
-												</div>
-											</a>
-										</div><!--- END COL -->
-									</div><!--- END COL -->
-								</div><!-- .slick-slide-in -->
-								
-								<div class="slick-slide-in">
-									<!-- portfolio-item -->
-									<div class="atf-grid all app logo">
-										<div class="atf-grid-portfolio">
-											<a class="atf-popup-img atf-single-portfolio" href="assets/img/cart-product/3.jpg">
-												<img class="atf-portfolio-img img-fluid mx-auto" src="assets/img/cart-product/3.jpg" alt="img">
-												<div class="atf-hover-portfolio">
-													<div class="atf-portfolio-content">
-														<div class="atf-portfolio-icon">
-															<i class="icon fa fa-shopping-basket"></i>
-														</div>
-														<h3>Product Title</h3>
-														<p>$200</p>
-													</div>
-												</div>
-											</a>
-										</div><!--- END COL -->
-									</div><!--- END COL -->
-								</div><!-- .slick-slide-in -->
-								
-								<div class="slick-slide-in">
-									<!-- portfolio-item -->
-									<div class="atf-grid all media app">
-										<div class="atf-grid-portfolio">
-											<a class="atf-popup-img atf-single-portfolio" href="assets/img/cart-product/4.jpg">
-												<img class="atf-portfolio-img img-fluid mx-auto" src="assets/img/cart-product/4.jpg" alt="img">
-												<div class="atf-hover-portfolio">
-													<div class="atf-portfolio-content">
-														<div class="atf-portfolio-icon">
-															<i class="icon fa fa-shopping-basket"></i>
-														</div>
-														<h3>Product Title</h3>
-														<p>$200</p>
-													</div>
-												</div>
-											</a>
-										</div><!--- END COL -->
-									</div><!--- END COL -->
-								</div><!-- .slick-slide-in -->
-								
-								<div class="slick-slide-in">
-									<!-- portfolio-item -->
-									<div class="atf-grid all media app">
-										<div class="atf-grid-portfolio">
-											<a class="atf-popup-img atf-single-portfolio" href="assets/img/cart-product/5.jpg">
-												<img class="atf-portfolio-img img-fluid mx-auto" src="assets/img/cart-product/5.jpg" alt="img">
-												<div class="atf-hover-portfolio">
-													<div class="atf-portfolio-content">
-														<div class="atf-portfolio-icon">
-															<i class="icon fa fa-shopping-basket"></i>
-														</div>
-														<h3>Product Title</h3>
-														<p>$200</p>
-													</div>
-												</div>
-											</a>
-										</div><!--- END COL -->
-									</div><!--- END COL -->
-								</div><!-- .slick-slide-in -->
-								
-								<div class="slick-slide-in">
-									<!-- portfolio-item -->
-									<div class="atf-grid all media app">
-										<div class="atf-grid-portfolio">
-											<a class="atf-popup-img atf-single-portfolio" href="assets/img/cart-product/6.jpg">
-												<img class="atf-portfolio-img img-fluid mx-auto" src="assets/img/cart-product/6.jpg" alt="img">
-												<div class="atf-hover-portfolio">
-													<div class="atf-portfolio-content">
-														<div class="atf-portfolio-icon">
-															<i class="icon fa fa-shopping-basket"></i>
-														</div>
-														<h3>Product Title</h3>
-														<p>$200</p>
-													</div>
-												</div>
-											</a>
-										</div><!--- END COL -->
-									</div><!--- END COL -->
-								</div><!-- .slick-slide-in -->
-								<div class="slick-slide-in">
-									<!-- portfolio-item -->
-									<div class="atf-grid all media app">
-										<div class="atf-grid-portfolio">
-											<a class="atf-popup-img atf-single-portfolio" href="assets/img/cart-product/7.jpg">
-												<img class="atf-portfolio-img img-fluid mx-auto" src="assets/img/cart-product/7.jpg" alt="img">
-												<div class="atf-hover-portfolio">
-													<div class="atf-portfolio-content">
-														<div class="atf-portfolio-icon">
-															<i class="icon fa fa-shopping-basket"></i>
-														</div>
-														<h3>Product Title</h3>
-														<p>$200</p>
-													</div>
-												</div>
-											</a>
-										</div><!--- END COL -->
-									</div><!--- END COL -->
-								</div><!-- .slick-slide-in -->
-							</div><!-- .slick-slide-Wrapper -->
-						</div><!-- .slick-container -->
-						
-						<div class="pagination atf-style1 atf-flex atf-hidden"></div> <!-- If dont need Pagination then add class .atf-hidden -->
-						<div class="swipe-arrow atf-style1"> <!-- If dont need navigation then add class .atf-hidden -->
-							<div class="slick-arrow-left"><i class="fa fa-chevron-left"></i></div>
-							<div class="slick-arrow-right"><i class="fa fa-chevron-right"></i></div>
-						</div>
-					</div><!-- .atf-slider -->
-				</div><!-- .container -->	
-				
-				<div class="atf-portfolio-btn atf-main-btn text-center wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s" data-wow-offset="0">
-					<a href="portfolio.html" class="atf-themes-btn mt-5">View More<i class="fa fa-angle-right"></i></a>
-				</div>
-			</section>
-			<!-- Portfolio Section End -->
+			
 			
 			<!-- START PROMOTION  -->
-			<section  class="atf-promo-offer atf-align-items-details" data-stellar-background-ratio="0.3" style="background-image: url(assets/img/gallery/4.jpg); background-size:cover; background-position: center center;">
+			<section  class="atf-promo-offer atf-align-items-details" data-stellar-background-ratio="0.3" style="background-image: url(assets/img/gallery/LicorneBike_Stella.jpg); background-size:cover; background-position: center center;">
 				<div class="container">
 					<div class="row justify-content-left">
 						<div class="col-xl-6 col-lg-6 col-12 text-left">
 							<div class="atf-promo-content atf-main-btn">
-								<h5 class="mb-2 text-uppercase text-white">Exclusive On Majid</h5>
-								<h3 class="">New Year Sale</h3>
-								<p class="text-white pr-lg-5">Lorem elementum Sed congue nisl dolorSed congue nisl dolor Lorem elementum Sed congue nisl dolorSed.</p>
+								<h5 class="mb-2 text-uppercase text-white">Exclusive On Famazon</h5>
+								<h3 class="">Monthly Sale</h3>
+								<p class="text-white pr-lg-5">Enjoy our monthly sales with exclusive items.</p>
 								<div class="atf-main-btn mt-4"> 
 								<a href="#home" class="page-scroll atf-themes-btn">Shop Now<i class="fa fa-angle-right"></i></a>
 							</div>
@@ -363,391 +266,7 @@
 				</div><!-- END CONTAINER  -->
 			</section>
 			<!-- END PROMOTION -->
-			
-			
-			
-			<!-- START PROJECTS  -->
-			<section id="gallery" class="atf-gallery-area atf-section-padding">
-				<div class="container">
-					<div class="row justify-content-center">
-						<div class="col-xl-6 col-lg-6 col-12">
-							<div class="atf-section-title text-center wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s" data-wow-offset="0">
-								<h2 class="">Popular Item</h2>
-								<p class="mx-auto my-auto">Lorem elementum Sed congue nisl dolorSed congue nisl dolor Lorem elementum Sed congue nisl dolorSed.</p>
-							</div>
-						</div><!--- END COL -->
-					</div><!--- END ROW -->
-					
-					
-					<div class="container">
-						<div class="atf-slider atf-style2">
-							<div class="slick-container" data-autoplay="0" data-loop="1" data-speed="600" data-center="0"  data-slides-per-view="responsive" data-xs-slides="1" data-sm-slides="2" data-md-slides="2" data-lg-slides="4" data-add-slides="2">
-								<div class="slick-wrapper">
-									<div class="slick-slide-in">	
-										<div class="atf-single-gallery">
-											<img src="assets/img/cart-product/1.jpg" class="img-gallery img-fluid mx-auto my-auto" alt="" />
-											<div class="atf-gallery-info text-center">
-												<h2>New</h2>
-											</div>
-										</div><!-- END SINGLE GALLERY -->
-										<div class="atf-product-title">
-											<h4><a href="#">Product Title</a></h4>
-											<div class="atf-product-rating">
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-											</div>											
-											<span class="atf-product-price">$100.00</span><span class="ml-3"><del>$130</del></span>
-											<span class="atf-gallery-product-cart float-right"><a href="product-details.html"><i class="icon fa fa-shopping-basket"></i></a></span>
-										</div>
-									</div><!-- .slick-slide-in -->
-									
-									<div class="slick-slide-in">
-										<div class="atf-single-gallery">
-											<img src="assets/img/cart-product/2.jpg" class="img-gallery img-fluid mx-auto my-auto" alt="" />
-											<div class="atf-gallery-overlay"></div>
-											<div class="atf-gallery-info text-center">
-												<h2>Sale</h2>
-											</div>
-										</div><!-- END SINGLE GALLERY -->
-										<div class="atf-product-title">
-											<h4><a href="#">Product Title</a></h4>
-											<div class="atf-product-rating">
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-											</div>											
-											<span class="atf-product-price">$100.00</span><span class="ml-3"><del>$130</del></span>
-											<span class="atf-gallery-product-cart float-right"><a href="product-details.html"><i class="icon fa fa-shopping-basket"></i></a></span>
-										</div>
-									</div><!-- .slick-slide-in -->
-									
-									<div class="slick-slide-in">
-										<div class="atf-single-gallery">
-											<img src="assets/img/cart-product/3.jpg" class="img-gallery img-fluid mx-auto my-auto" alt="" />
-											<div class="atf-gallery-info text-center">
-												<h2>New</h2>
-											</div>
-										</div><!-- END SINGLE GALLERY -->
-										<div class="atf-product-title">
-											<h4><a href="#">Product Title</a></h4>
-											<div class="atf-product-rating">
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-											</div>											
-											<span class="atf-product-price">$100.00</span><span class="ml-3"><del>$130</del></span>
-											<span class="atf-gallery-product-cart float-right"><a href="product-details.html"><i class="icon fa fa-shopping-basket"></i></a></span>
-										</div>
-									</div><!-- .slick-slide-in -->
-									
-									<div class="slick-slide-in">
-										<div class="atf-single-gallery">
-											<img src="assets/img/cart-product/4.jpg" class="img-gallery img-fluid mx-auto my-auto" alt="" />
-											<div class="atf-gallery-info text-center">
-												<h2>New</h2>
-											</div>
-										</div><!-- END SINGLE GALLERY -->
-										<div class="atf-product-title">
-											<h4><a href="#">Product Title</a></h4>
-											<div class="atf-product-rating">
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-											</div>											
-											<span class="atf-product-price">$100.00</span><span class="ml-3"><del>$130</del></span>
-											<span class="atf-gallery-product-cart float-right"><a href="product-details.html"><i class="icon fa fa-shopping-basket"></i></a></span>
-										</div>
-									</div><!-- .slick-slide-in -->
-									
-									<div class="slick-slide-in">
-										<div class="atf-single-gallery">
-											<img src="assets/img/cart-product/5.jpg" class="img-gallery img-fluid mx-auto my-auto" alt="" />
-											<div class="atf-gallery-overlay"></div>
-											<div class="atf-gallery-info text-center">
-												<h2>New</h2>
-											</div>
-										</div><!-- END SINGLE GALLERY -->
-										<div class="atf-product-title">
-											<h4><a href="#">Product Title</a></h4>
-											<div class="atf-product-rating">
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-											</div>											
-											<span class="atf-product-price">$100.00</span><span class="ml-3"><del>$130</del></span>
-											<span class="atf-gallery-product-cart float-right"><a href="product-details.html"><i class="icon fa fa-shopping-basket"></i></a></span>
-										</div>
-									</div><!-- .slick-slide-in -->
-									
-									<div class="slick-slide-in">
-										<div class="atf-single-gallery">
-											<img src="assets/img/cart-product/6.jpg" class="img-gallery img-fluid mx-auto my-auto" alt="" />
-											<div class="atf-gallery-info align-items-center text-center">
-												<h2>Sale</h2>
-											</div>
-										</div><!-- END SINGLE GALLERY -->
-										<div class="atf-product-title">
-											<h4><a href="#">Product Title</a></h4>
-											<div class="atf-product-rating">
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-											</div>											
-											<span class="atf-product-price">$100.00</span><span class="ml-3"><del>$130</del></span>
-											<span class="atf-gallery-product-cart float-right"><a href="product-details.html"><i class="icon fa fa-shopping-basket"></i></a></span>
-										</div>
-									</div><!-- .slick-slide-in -->
-								</div><!-- .slick-slide-Wrapper -->
-							</div><!-- .slick-container -->
-							
-							<div class="pagination atf-style1 atf-flex atf-hidden"></div> <!-- If dont need Pagination then add class .atf-hidden -->
-							<div class="swipe-arrow atf-style1"> <!-- If dont need navigation then add class .atf-hidden -->
-								<div class="slick-arrow-left"><i class="fa fa-chevron-left"></i></div>
-								<div class="slick-arrow-right"><i class="fa fa-chevron-right"></i></div>
-							</div>
-						</div><!-- .atf-slider -->
-					</div><!-- .container -->	
-				</div><!--- END CONTAINER -->
-			</section>
-			<!-- END PROJECTS -->
 
-			<!-- BLOG SECTION START-->
-			<section id="blog" class="atf-blog-area atf-section-padding">
-				<div class="container">
-					<div class="row clearfix justify-content-center">
-						<div class="col-lg-6 col-xl-6">
-							<div class="atf-section-title text-center wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s" data-wow-offset="0">
-								<h2>Our Recent News</h2>
-								<p class="mx-auto my-auto">Lorem elementum Sed congue nisl dolorSed congue nisl dolor Lorem elementum Sed congue nisl dolorSed.</p>
-							</div>
-						</div>
-					</div><!--- END ROW -->
-					
-					<div class="container">
-						<div class="atf-slider atf-style2">
-							<div class="slick-container" data-autoplay="0" data-loop="1" data-speed="600" data-center="0"  data-slides-per-view="responsive" data-xs-slides="1" data-sm-slides="2" data-md-slides="3" data-lg-slides="3" data-add-slides="3">
-								<div class="slick-wrapper">
-									<div class="slick-slide-in">
-										<div class="atf-post-slide">
-											<div class="atf-post-pic">
-												<img src="assets/img/blog/1.jpg" alt="">
-												<ul class="atf-post-category">
-													<li><a href="#">29 Dec,</a></li>
-													<li><a href="#">2020</a></li>
-												</ul>
-											</div>
-											<div class="atf-post-header">
-												<ul class="atf-post-bar">
-													<li><i class="fa fa-user"></i><a href="#">Admin</a></li>
-													<li><i class="fa fa-comments"></i><a href="">7.5k</a></li>
-													<li><i class="fab fa-gratipay"></i><a href="">2.3k</a></li>
-												</ul>
-												<h4 class="atf-post-title">
-													<a href="blog.html">Best Laptop Discount 30%..</a>
-												</h4>
-											</div>
-											<p class="atf-post-description">
-												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas gravida nulla eu massa efficitur.
-											</p>
-											<div class="atf-main-btn atf-blog-btn mt-2 pb-4 ml-3">
-												<a href="blog.html" class="atf-themes-btn">Read More <i class="fa fa-angle-right atf-blogs-btn"></i></a>
-											</div>
-										</div>
-									</div><!-- .slick-slide-in -->
-									
-									<div class="slick-slide-in">
-										<div class="atf-post-slide">
-											<div class="atf-post-pic">
-												<img src="assets/img/blog/2.jpg" alt="">
-												<ul class="atf-post-category">
-													<li><a href="#">29 Dec,</a></li>
-													<li><a href="#">2020</a></li>
-												</ul>
-											</div>
-											<div class="atf-post-header">
-												<ul class="atf-post-bar">
-													<li><i class="fa fa-user"></i><a href="#">Admin</a></li>
-													<li><i class="fa fa-comments"></i><a href="">7.5k</a></li>
-													<li><i class="fab fa-gratipay"></i><a href="">2.3k</a></li>
-												</ul>
-												<h4 class="atf-post-title">
-													<a href="blog.html">Best Laptop Discount 30%..</a>
-												</h4>
-											</div>
-											<p class="atf-post-description">
-												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas gravida nulla eu massa efficitur.
-											</p>
-											<div class="atf-main-btn atf-blog-btn mt-2 pb-4 ml-3">
-												<a href="blog.html" class="atf-themes-btn">Read More <i class="fa fa-angle-right atf-blogs-btn"></i></a>
-											</div>
-										</div>
-									</div><!-- .slick-slide-in -->
-									
-									<div class="slick-slide-in">
-										<div class="atf-post-slide">
-											<div class="atf-post-pic">
-												<img src="assets/img/blog/3.jpg" alt="">
-												<ul class="atf-post-category">
-													<li><a href="#">29 Dec,</a></li>
-													<li><a href="#">2020</a></li>
-												</ul>
-											</div>
-											<div class="atf-post-header">
-												<ul class="atf-post-bar">
-													<li><i class="fa fa-user"></i><a href="#">Admin</a></li>
-													<li><i class="fa fa-comments"></i><a href="">7.5k</a></li>
-													<li><i class="fab fa-gratipay"></i><a href="">2.3k</a></li>
-												</ul>
-												<h4 class="atf-post-title">
-													<a href="blog.html">Best Laptop Discount 30%..</a>
-												</h4>
-											</div>
-											<p class="atf-post-description">
-												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas gravida nulla eu massa efficitur.
-											</p>
-											<div class="atf-main-btn atf-blog-btn mt-2 pb-4 ml-3">
-												<a href="blog.html" class="atf-themes-btn">Read More <i class="fa fa-angle-right atf-blogs-btn"></i></a>
-											</div>
-										</div>
-									</div><!-- .slick-slide-in -->
-									
-									<div class="slick-slide-in">
-										<div class="atf-post-slide">
-											<div class="atf-post-pic">
-												<img src="assets/img/blog/3.jpg" alt="">
-												<ul class="atf-post-category">
-													<li><a href="#">29 Dec,</a></li>
-													<li><a href="#">2020</a></li>
-												</ul>
-											</div>
-											<div class="atf-post-header">
-												<ul class="atf-post-bar">
-													<li><i class="fa fa-user"></i><a href="#">Admin</a></li>
-													<li><i class="fa fa-comments"></i><a href="">7.5k</a></li>
-													<li><i class="fab fa-gratipay"></i><a href="">2.3k</a></li>
-												</ul>
-												<h4 class="atf-post-title">
-													<a href="blog.html">Best Laptop Discount 30%..</a>
-												</h4>
-											</div>
-											<p class="atf-post-description">
-												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas gravida nulla eu massa efficitur.
-											</p>
-											<div class="atf-main-btn atf-blog-btn mt-2 pb-4 ml-3">
-												<a href="blog.html" class="atf-themes-btn">Read More <i class="fa fa-angle-right atf-blogs-btn"></i></a>
-											</div>
-										</div>
-									</div><!-- .slick-slide-in -->
-									
-									<div class="slick-slide-in">
-										<div class="atf-post-slide">
-											<div class="atf-post-pic">
-												<img src="assets/img/blog/4.jpg" alt="">
-												<ul class="atf-post-category">
-													<li><a href="#">29 Dec,</a></li>
-													<li><a href="#">2020</a></li>
-												</ul>
-											</div>
-											<div class="atf-post-header">
-												<ul class="atf-post-bar">
-													<li><i class="fa fa-user"></i><a href="#">Admin</a></li>
-													<li><i class="fa fa-comments"></i><a href="">7.5k</a></li>
-													<li><i class="fab fa-gratipay"></i><a href="">2.3k</a></li>
-												</ul>
-												<h4 class="atf-post-title">
-													<a href="blog.html">Best Laptop Discount 30%..</a>
-												</h4>
-											</div>
-											<p class="atf-post-description">
-												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas gravida nulla eu massa efficitur.
-											</p>
-											<div class="atf-main-btn atf-blog-btn mt-2 pb-4 ml-3">
-												<a href="blog.html" class="atf-themes-btn">Read More <i class="fa fa-angle-right atf-blogs-btn"></i></a>
-											</div>
-										</div>
-									</div><!-- .slick-slide-in -->
-									
-									<div class="slick-slide-in">
-										<div class="atf-post-slide">
-											<div class="atf-post-pic">
-												<img src="assets/img/blog/5.jpg" alt="">
-												<ul class="atf-post-category">
-													<li><a href="#">29 Dec,</a></li>
-													<li><a href="#">2020</a></li>
-												</ul>
-											</div>
-											<div class="atf-post-header">
-												<ul class="atf-post-bar">
-													<li><i class="fa fa-user"></i><a href="#">Admin</a></li>
-													<li><i class="fa fa-comments"></i><a href="">7.5k</a></li>
-													<li><i class="fab fa-gratipay"></i><a href="">2.3k</a></li>
-												</ul>
-												<h4 class="atf-post-title">
-													<a href="blog.html">Best Laptop Discount 30%..</a>
-												</h4>
-											</div>
-											<p class="atf-post-description">
-												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas gravida nulla eu massa efficitur.
-											</p>
-											<div class="atf-main-btn atf-blog-btn mt-2 pb-4 ml-3">
-												<a href="blog.html" class="atf-themes-btn">Read More <i class="fa fa-angle-right atf-blogs-btn"></i></a>
-											</div>
-										</div>
-									</div><!-- .slick-slide-in -->
-									
-									<div class="slick-slide-in">
-										<div class="atf-post-slide">
-											<div class="atf-post-pic">
-												<img src="assets/img/blog/6.jpg" alt="">
-												<ul class="atf-post-category">
-													<li><a href="#">29 Dec,</a></li>
-													<li><a href="#">2020</a></li>
-												</ul>
-											</div>
-											<div class="atf-post-header">
-												<ul class="atf-post-bar">
-													<li><i class="fa fa-user"></i><a href="#">Admin</a></li>
-													<li><i class="fa fa-comments"></i><a href="">7.5k</a></li>
-													<li><i class="fab fa-gratipay"></i><a href="">2.3k</a></li>
-												</ul>
-												<h4 class="atf-post-title">
-													<a href="blog.html">Best Laptop Discount 30%..</a>
-												</h4>
-											</div>
-											<p class="atf-post-description">
-												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas gravida nulla eu massa efficitur.
-											</p>
-											<div class="atf-main-btn atf-blog-btn mt-2 pb-4 ml-3">
-												<a href="blog.html" class="atf-themes-btn">Read More <i class="fa fa-angle-right atf-blogs-btn"></i></a>
-											</div>
-										</div>
-									</div><!-- .slick-slide-in -->
-								</div><!-- .slick-slide-Wrapper -->
-							</div><!-- .slick-container -->
-							
-							<div class="pagination atf-style1 atf-flex atf-hidden"></div> <!-- If dont need Pagination then add class .atf-hidden -->
-							<div class="swipe-arrow atf-style1"> <!-- If dont need navigation then add class .atf-hidden -->
-								<div class="slick-arrow-left"><i class="fa fa-chevron-left"></i></div>
-								<div class="slick-arrow-right"><i class="fa fa-chevron-right"></i></div>
-							</div>
-						</div><!-- .atf-slider -->
-					</div><!-- .container -->	
-				</div><!--- END CONTAINER -->
-			</section>
-		   <!-- BLOG SECTION END-->
 		 
 		   <!-- FOOTER SECTION-->
 		   <?php include_once "components/footer.php" ?>
@@ -756,5 +275,6 @@
 		
 		<!-- JS Script COMPONENTS -->
 		<?php include_once "components/jscollection.php" ?>
+		<?php $db->close(); ?>
 	</body>
 </html>

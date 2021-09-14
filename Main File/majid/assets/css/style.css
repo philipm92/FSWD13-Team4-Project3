@@ -317,7 +317,8 @@ button, input, textarea:focus {
 	cursor: pointer;
 	transition: 1.5s ease;
 	border: none;
-	background: transparent; }
+	background: transparent; 
+}
 
 .atf-scrollup-icon {
 	font-size: 25px;
@@ -2293,7 +2294,7 @@ button, input, textarea:focus {
 }
   
 .atf-page-heading.atf-size-md {
-	height: 450px; 
+	height: 200px; 
 }
 .atf-page-heading:before {
     content: '';
@@ -2590,7 +2591,7 @@ button, input, textarea:focus {
     font-size: 16px; }
 
   .atf-page-heading.atf-size-md {
-    height: 350px;
+    height: 150px;
     padding-top: 80px; }
 
   .atf-page-heading-title br {

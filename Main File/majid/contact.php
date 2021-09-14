@@ -1,7 +1,10 @@
+<?php
+session_start();
+ob_start();
+require_once 'assets/php/db_connect.php';
+?>
 <!DOCTYPE html>
-<html lang="zxx">
-
-
+<html lang="en">
 	<head>
 		<!-- Meta -->
 		<meta charset="utf-8">
@@ -95,17 +98,17 @@
 									<div class="atf-contact-details">
 										<i class="fa fa-home"></i>
 										<h4>Home Address</h4>
-										<p>1 Grafton Street, Dublin, Ireland University.</p>
+										<p>Walfischgasse 1, 1010 Vienna</p>
 									</div>
 									<div class="atf-contact-details">
 										<i class="fa fa-phone"></i>
-										<h4>Mobile Number</h4>
-										<p>+135 773 321 4442</p>
+										<h4>Phone Number</h4>
+										<p>+43 (0) 1 512 33 44</p>
 									</div>
 									<div class="atf-contact-details">
 										<i class="fa fa-envelope"></i>
 										<h4>Email Address</h4>
-										<p>demo@example.com</p>
+										<p>info@famazon.com</p>
 									</div>
 								</div><!--- END CONTACT -->
 							</div><!--- END COL -->
@@ -116,79 +119,13 @@
 				
 				<!-- Google Map start-->
 				<div id="atf-map-area">
-					<iframe style="border:0" src="https://maps.google.com/maps?width=100%25&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" allowfullscreen></iframe>
+					<iframe style="border:0" src="https://maps.google.com/maps?width=100%25&amp;hl=en&amp;q=1%20Walfischgasse,%20Vienna,%20Austria+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" allowfullscreen></iframe>
 				</div>
 				<!-- Google Map end -->
 				
 			</div>
 			<!--- END CONTENT -->
-			
-			
-			 <!-- START COMPANY BRAND LOGO  -->
-			<div id="atf-brand-area" class="atf-brand-area atf-section-padding">
-				<div class="atf-brand-overlay">
-					<div class="container">
-						<div class="atf-slider atf-style2">
-							<div class="slick-container" data-autoplay="0" data-loop="1" data-speed="600" data-center="0"  data-slides-per-view="responsive" data-xs-slides="1" data-sm-slides="3" data-md-slides="3" data-lg-slides="5" data-add-slides="3">
-								<div class="slick-wrapper">
-									<div class="slick-slide-in">
-										<div class="atf-brand-active">
-											<a href="#"><img src="assets/img/partner/1.png" alt="image"></a>
-										</div>
-									</div><!-- .slick-slide-in -->
-									
-									<div class="slick-slide-in">
-										<div class="atf-brand-active">
-											<a href="#"><img src="assets/img/partner/2.png" alt="image"></a>
-										</div>
-									</div><!-- .slick-slide-in -->
-									
-									<div class="slick-slide-in">
-										<div class="atf-brand-active">
-											<a href="#"><img src="assets/img/partner/3.png" alt="image"></a>
-										</div>
-									</div><!-- .slick-slide-in -->
-									<div class="slick-slide-in">
-										<div class="atf-brand-active">
-											<a href="#"><img src="assets/img/partner/4.png" alt="image"></a>
-										</div>
-									</div><!-- .slick-slide-in -->
-									<div class="slick-slide-in">
-										<div class="atf-brand-active">
-											<a href="#"><img src="assets/img/partner/5.png" alt="image"></a>
-										</div>
-									</div><!-- .slick-slide-in -->
-									
-									<div class="slick-slide-in">
-										<div class="atf-brand-active">
-											<a href="#"><img src="assets/img/partner/1.png" alt="image"></a>
-										</div>
-									</div><!-- .slick-slide-in -->
-									
-									<div class="slick-slide-in">
-										<div class="atf-brand-active">
-											<a href="#"><img src="assets/img/partner/2.png" alt="image"></a>
-										</div>
-									</div><!-- .slick-slide-in -->
-									
-								</div><!-- .slick-slide-Wrapper -->
-							</div><!-- .slick-container -->
-							
-							<div class="pagination atf-style1 atf-flex atf-hidden"></div> <!-- If dont need Pagination then add class .atf-hidden -->
-							<div class="swipe-arrow atf-style1"> <!-- If dont need navigation then add class .atf-hidden -->
-								<div class="slick-arrow-left"><i class="fa fa-chevron-left"></i></div>
-								<div class="slick-arrow-right"><i class="fa fa-chevron-right"></i></div>
-							</div>
-						</div><!-- .atf-slider -->
-					</div><!-- .container -->	
-				</div><!-- END OVERLAY -->
-			</div>
-			<!-- END COMPANY BRAND LOGO -->
-
-			
-		   <!-- NEWSLETTER COMPONENTS -->
-		   <?php include_once "components/newsletter.php" ?>
-		 
+		
 		   <!-- FOOTER SECTION-->
 		   <?php include_once "components/footer.php" ?>
 		</div>

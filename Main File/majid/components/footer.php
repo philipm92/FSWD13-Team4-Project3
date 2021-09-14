@@ -58,7 +58,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 col-xl-5 col-12 mx-auto my-auto text-center wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s" data-wow-offset="0">
-					<p>&copy;Copyright <?php echo date("Y") ?> - All Right Reserved. Designed <i class="fa fa-heart ml-1 mr-1"></i> by <a href="">Theme Family</a> </p>
+					<p>&copy;Copyright <?php echo date("Y") ?> - All Right Reserved. Designed <i class="fa fa-heart ml-1 mr-1"></i>by<br /><a href="">Team 4 (Ateyaf, Shania, Philip, Christoph, Bernhard)</a> </p>
 				</div><!--- END COL -->
 			</div><!--- END ROW -->
 		</div>
