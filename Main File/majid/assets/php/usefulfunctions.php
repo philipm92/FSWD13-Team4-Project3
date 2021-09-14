@@ -30,21 +30,30 @@ function CleanInput($string) { // sanitize user input to prevent sql injection
     return $new_string;
 }
 
-// NOT NEEDED!!! still useful though
-// function CreateSelectDropDown($sql, $default = NULL) {
-//     global $db;
-//     $select_string = "";
-//     $result = $db->query($sql)->fetchArray();
-//     #echo gettype($result["Type"]);
-//     if (count($result) > 0 ) $option_array = explode("','",preg_replace("/(enum|set)\('(.+?)'\)/","\\2", $result["Type"]));
-//     if (isset($option_array)) {
-//         foreach($option_array as $option) {
-//             if ($option == $default) $select_string .= "<option selected value='{$default}'>".ucfirst($default)."</option>";
-//             else $select_string .= "<option value='$option'>".ucfirst($option)."</option>";
-//         }
-//     } else $select_string = "<li>Status not available</li>";
-//     return $select_string;
-// }
+function CreateSelectDropDown($sql, $default = NULL, $get_column_type = FALSE) {
+    global $db;
+    $select_string = "<li>Status not available</li>";
+    if ($get_column_type) {
+        $result = $db->query($sql)->fetchArray();
+        #echo gettype($result["Type"]);
+        if (count($result) > 0 ) $option_array = explode("','",preg_replace("/(enum|set)\('(.+?)'\)/","\\2", $result["Type"]));
+        if (isset($option_array)) {
+            $select_string = "";
+            foreach($option_array as $option) {
+                if ($option == $default) $select_string .= "<option selected value='{$default}'>".ucfirst($default)."</option>";
+                else $select_string .= "<option value='$option'>".ucfirst($option)."</option>";
+            }
+        }
+    } else {
+        $rows = $db->query($sql)->fetchAll();
+        $select_string = "";
+        foreach ($rows as $row) {
+            $select_string .= "<option value='".(int)$row["ID"]."'>".$row["name"]."</option>";
+        }
+    }
+
+    return $select_string;
+}
 
 
 function GetQueryData($rows) {
@@ -65,6 +74,15 @@ function GetQueryData($rows) {
     return $data;
 }
 
+function GetUserID() {
+	if (isset($_SESSION['admin'])) return $_SESSION['admin'];
+	else if (isset($_SESSION['user'])) return $_SESSION['user'];
+	else if (isset($_SESSION['seller'])) return $_SESSION['seller'];
+	else if (isset($_SESSION['delivery'])) return $_SESSION['delivery'];
+	return NULL;
+}
+
+
 // TODO
 function ConvertSQLToHTMLType($rows) {
     return FALSE;
@@ -72,6 +90,23 @@ function ConvertSQLToHTMLType($rows) {
 
 
 function InRange($x, $lo, $hi) { return ($x >= $lo) && ($x <= $hi); }
+
+function ValidatePhoneNumber($phone) {
+    // Allow +, - and . in phone number
+    $filtered_phone_number = filter_var($phone, FILTER_SANITIZE_NUMBER_INT);
+    // Remove "-" and "/" from number
+    $phone_to_check = str_replace("-", "", $filtered_phone_number);
+    $phone_to_check = str_replace("/", "", $filtered_phone_number);
+    
+    // Check the lenght of number
+    if (InRange(strlen($phone_to_check), 10, 15)) return TRUE;
+    return FALSE;
+}
+
+function ValidateDate($date, $format = 'Y-m-d'){
+    $d = DateTime::createFromFormat($format, $date);
+    return $d && $d->format($format) === $date;
+}
 
 
 ?>

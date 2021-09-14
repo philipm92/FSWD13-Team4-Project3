@@ -38,7 +38,7 @@
 								<div class="atf-page-heading-in text-center">
 									<h1 class="atf-page-heading-title pr-lg-5">We are best Shop 30% Dresss and Laptop </h1>
 									<div class="atf-post-label">
-										<span>By <a href="#">Al-Majid</a></span>
+										<span>By <a href="#">Famazon</a></span>
 										<span>December 31, 2020</span>
 									</div>
 								</div>

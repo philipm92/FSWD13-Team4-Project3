@@ -1,7 +1,10 @@
+<?php
+session_start();
+ob_start();
+require_once 'assets/php/db_connect.php';
+?>
 <!DOCTYPE html>
-<html lang="zxx">
-
-
+<html lang="en">
 	<head>
 		<!-- Meta -->
 		<meta charset="utf-8">
@@ -95,17 +98,17 @@
 									<div class="atf-contact-details">
 										<i class="fa fa-home"></i>
 										<h4>Home Address</h4>
-										<p>1 Grafton Street, Dublin, Ireland University.</p>
+										<p>Walfischgasse 1, 1010 Vienna</p>
 									</div>
 									<div class="atf-contact-details">
 										<i class="fa fa-phone"></i>
-										<h4>Mobile Number</h4>
-										<p>+135 773 321 4442</p>
+										<h4>Phone Number</h4>
+										<p>+43 (0) 1 512 33 44</p>
 									</div>
 									<div class="atf-contact-details">
 										<i class="fa fa-envelope"></i>
 										<h4>Email Address</h4>
-										<p>demo@example.com</p>
+										<p>info@famazon.com</p>
 									</div>
 								</div><!--- END CONTACT -->
 							</div><!--- END COL -->
@@ -114,6 +117,7 @@
 				</section>
 				<!-- CONTACT SECTION END-->
 				
+
 				<!-- Google Map start
 				<h1 style="display:flix;margin-left: 30%;"> You can find Us here</h1>
 				<div id="atf-map-area" style= "border:10px solid red;">
@@ -187,6 +191,17 @@
 		   <!-- NEWSLETTER COMPONENTS -->
 		   <?php include_once "components/newsletter.php" ?>
 		 
+
+				<!-- Google Map start-->
+				<div id="atf-map-area">
+					<iframe style="border:0" src="https://maps.google.com/maps?width=100%25&amp;hl=en&amp;q=1%20Walfischgasse,%20Vienna,%20Austria+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" allowfullscreen></iframe>
+				</div>
+				<!-- Google Map end -->
+				
+			</div>
+			<!--- END CONTENT -->
+		
+>>>>>>> acb2b8c258c9b1bd282b476f69a4af496ebe1330
 		   <!-- FOOTER SECTION-->
 		   <?php include_once "components/footer.php" ?>
 		  
