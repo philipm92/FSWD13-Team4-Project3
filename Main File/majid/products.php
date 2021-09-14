@@ -25,7 +25,7 @@ require_once 'assets/php/db_connect.php';
 		<div class="page-wrapper">
 		
 			<!-- PRELOADER COMPONENT -->
-			<?php include_once "components/preloader.php" ?>
+			
 			<!-- Back-to-top COMPONENT -->	
 			<?php include_once "components/totop.php" ?>
 			<!-- Body Overlay COMPONENT -->
@@ -68,30 +68,55 @@ require_once 'assets/php/db_connect.php';
 					
 					<div class="row justify-content-center">
 						<div class="slick-wrapper centered">
-							<?php 
-									$sql = 'SELECT * FROM products WHERE 1;';
-									$result = $db->query($sql); //mysqli_query($connection, $sql);
-				 					$rows = $result->fetchAll();
-									
-									
-									foreach ($rows as $row) { //while ($row = $result->fetch_row()) {
+							<?php
+								// prepare base SQL-Statement
+								$desc_length = 150;
+								$sql = "SELECT p.name, SUBSTR(p.description,1,?) AS short_description, p.price, p.discount, p.amount, p.image, CONCAT(u.first_name, ' ', u.last_name) AS 'seller_name', c.name AS 'category_name'
+								FROM `products` AS p
+								JOIN `product_in_category` AS pc ON p.ID = pc.fk_product 
+								JOIN `categories` AS c ON c.ID = pc.fk_category
+								JOIN `users` AS u ON u.ID = p.fk_seller ";
+								$sql .= " "; // safety space just in case
+								$params = array($desc_length);
+								// CATEGORY SEARCH
+								if (isset($_GET["categoryID"])) {
+									$sql .= "WHERE pc.fk_category = ?;";
+									$params[] = (int)$_GET["categoryID"];
+								// SEARCH BAR SEARCH
+								} elseif (isset($_GET["searchterm"])) {
+									$sql .= "WHERE p.name LIKE ? OR 'category_name' LIKE ?;";
+									$search = '%'.CleanInput($_GET["searchterm"]).'%';
+									array_push($params, $search, $search);
+								} else {
+									$sql .= "WHERE `hidden_field` = ?;";
+									$params[] = 0;									
+								}
+
+								$result = $db->query($sql, $params);
+								$rows = $result->fetchAll();							
+									foreach ($rows as $row) {
 										echo('<div class="singleproduct slick-slide-in">	
 											<div class="atf-single-gallery">
-												<img src="assets/img/cart-product/1.jpg" class="img-gallery img-fluid mx-auto my-auto" alt="" />
+												<img src="assets/img/cart-product/'.$row["image"].'" class="img-gallery img-fluid mx-auto my-auto" alt="'.$row["name"].'" />
 												<div class="atf-gallery-info text-center">
 													<h2>New</h2>
 												</div>
 											</div><!-- END SINGLE GALLERY -->
 											<div class="atf-product-title">
-												<h4><a href="#">'.$row["name"].'</a></h4>
-												<div class="atf-product-rating">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
+												<div class="d-flex flex-md-row align-items-end align-self-end justify-content-between">
+													<h4><a href="#">'.$row["name"].'</a></h4>
+													<h5>'.$row["seller_name"].'</h5>
+													<div class="atf-product-rating">
+														<i class="fas fa-star"></i>
+														<i class="fas fa-star"></i>
+														<i class="fas fa-star"></i>
+														<i class="fas fa-star-half-alt"></i>
+														<i class="far fa-star"></i>
+														<p><a href="#">X reviews</a></p>
+													</div>
 												</div>											
-												<span class="atf-product-price">$ '.$row["description"].'</span>
+												<span class="atf-product-price">&dollar;'.$row["price"].'</span>
+												<div class="atf-single-product-details">'.$row["short_description"].'<small><i>...</i></small></div>
 												<span class="atf-gallery-product-cart float-right"><a href="product-details.html"><i class="icon fa fa-shopping-basket"></i></a></span>
 											</div>
 										</div>');
